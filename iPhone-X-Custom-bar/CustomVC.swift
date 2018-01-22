@@ -15,7 +15,7 @@ class CustomVC: UIViewController {
       
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("CustomVC viewDidLoad")
+        print("CustomVC viewDidLoad Local")
 
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
