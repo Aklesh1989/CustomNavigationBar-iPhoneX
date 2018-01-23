@@ -16,9 +16,7 @@ class CustomVC: UIViewController {
       
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("CustomVC viewDidLoad Local")
-
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 2436:
@@ -28,15 +26,12 @@ class CustomVC: UIViewController {
                 bottomViewHeight.constant = 49
             }
         }
-        
     }
-   
     
     override func viewWillAppear(_ animated: Bool) {
-       self.makeAnimation()
         
+       self.makeAnimation()
     }
-    
     
     func makeAnimation()  {
         lblLabel.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)        
@@ -47,19 +42,13 @@ class CustomVC: UIViewController {
                        options: UIViewAnimationOptions.allowUserInteraction,
                        animations: {
                         self.lblLabel.transform = CGAffineTransform.identity
-        },
-                       completion: { Void in()  }
-        )
+        },completion: { Void in()  } )
     }
     
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func show(_ sender: Any) {
         
@@ -72,9 +61,6 @@ class CustomVC: UIViewController {
             self.lblLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
     }
-    
-    
-
 }
 
 
